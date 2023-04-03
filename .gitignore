@@ -40,3 +40,9 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# git Batch file
+up.bat
+
+# Asset Folder
+/src/assets

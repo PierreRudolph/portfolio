@@ -1,5 +1,13 @@
+@import url("./assets/fonts/fonts.css");
+
 body {
-    background-color: #FFFCF3;
+    font-family: 'Overpass', 'Arial', 'Verdana', sans-serif;
 }
 
-@import url("./assets/fonts/fonts.css");
+.main-outer-div {
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}

@@ -8,3 +8,6 @@
     <h2>Portfolio</h2>
     <span>This page is a sample of my work - please feel free to try them out.</span>
 </div>
+
+<app-project-preview *ngFor="let project of projects; index as i" [class.right]="i % 2" [project]="project"
+    [projectId]="i" class="preview-left"></app-project-preview>

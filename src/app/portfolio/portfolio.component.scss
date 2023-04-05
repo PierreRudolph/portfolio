@@ -41,6 +41,7 @@
 }
 
 .portfolio-head {
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,4 +60,17 @@
         font-weight: 400;
         font-size: 23px;
     }
+}
+
+.preview-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 130px;
+}
+
+.right {
+    flex-direction: row-reverse;
 }

@@ -8,6 +8,7 @@ import { AboveFoldComponent } from './above-fold/above-fold.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ProjectPreviewComponent } from './project-preview/project-preview.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     AboutMeComponent,
     MySkillsComponent,
     PortfolioComponent,
+    ProjectPreviewComponent,
 
   ],
   imports: [

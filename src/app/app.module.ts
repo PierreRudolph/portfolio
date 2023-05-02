@@ -9,6 +9,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ProjectPreviewComponent } from './project-preview/project-preview.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { ProjectPreviewComponent } from './project-preview/project-preview.compo
     MySkillsComponent,
     PortfolioComponent,
     ProjectPreviewComponent,
+    ContactFormComponent,
+    FooterComponent,
 
   ],
   imports: [

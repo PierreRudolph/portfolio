@@ -1,8 +1,14 @@
-<img src="assets/img/{{ project.img }}">
-<div class="project-info">
-    <h3>{{ project.title }}</h3>
-    <span>{{ project.technologies }}</span>
-    <p>{{ project.info }}</p>
-    <button class="button-black small-btn">Try out!</button>
+<div class="project-container" [class.project-container-right]="projectId % 2">
+    <img class="project-img" src="assets/img/{{ project.img }}">
+    <div class="border-div" [class.border-div-right]="projectId % 2">
+        <img class="cyrcle-arrow" [class.cyrcle-arrow-right]="projectId % 2" src="assets/layout/cyrcle-arrow.svg">
+    </div>
+    <div class="project-info" [class.project-info-right]="projectId % 2">
+        <h3>{{ project.title }}</h3>
+        <span>{{ project.technologies }}</span>
+        <p>{{ project.info }}</p>
+        <button class="button-black small-btn">Try out!</button>
+    </div>
 </div>
-<span class=" position-number">{{ projectId }}/05</span>
+
+<span class="position-number">{{ projectId }}/05</span>

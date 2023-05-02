@@ -1,6 +1,84 @@
-img {
+.project-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+
+
+
+    &:hover {
+        .border-div {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .cyrcle-arrow {
+            transition-delay: 125ms;
+            transition-duration: 225ms;
+            transform: rotate(0deg) scale(1.5) !important;
+        }
+
+        .cyrcle-arrow-right {
+            transform: rotate(270deg) scale(1.5) !important;
+        }
+
+        .project-img {
+            filter: grayscale(0%);
+        }
+
+        .project-info {
+            left: 800px;
+        }
+
+        .project-info-right {
+            right: 800px !important;
+        }
+    }
+}
+
+.project-img {
     width: 620px;
     object-fit: contain;
+    filter: grayscale(100%);
+}
+
+.border-div {
+    opacity: 0;
+    background-color: transparent;
+    border: 5px solid black;
+    position: relative;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 620px;
+    height: 393px;
+    pointer-events: none;
+}
+
+.cyrcle-arrow {
+    position: absolute;
+    right: -25px;
+    top: 172px;
+    width: 48px;
+    transform: rotate(135deg) scale(1);
+}
+
+.project-container-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cyrcle-arrow-right {
+    left: -25px !important;
+}
+
+.border-div-right {
+    left: unset !important;
+    right: 20px;
+}
+
+.project-info-right {
+    left: unset !important;
+    right: 280px !important;
 }
 
 .small-btn {
@@ -14,6 +92,15 @@ img {
 
 .project-info {
     width: 340px;
+    //transform: translateX(-515px);
+    position: absolute;
+    top: 0px;
+    left: 280px;
+    z-index: -1;
+    transition-delay: 125ms;
+    transition-duration: 225ms;
+
+
 
     h3 {
         font-family: 'Syne', 'Arial', 'Verdana', sans-serif;

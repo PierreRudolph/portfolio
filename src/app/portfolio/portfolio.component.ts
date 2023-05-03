@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
-
+  arrowAnimation: boolean = false;
   project = {
     img: '',
     title: '',

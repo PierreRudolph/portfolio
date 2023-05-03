@@ -17,9 +17,11 @@
     background-image: url('../../assets/layout/long-arrow-right.svg');
     background-repeat: no-repeat;
     background-position: bottom right;
+}
 
+.arrow-animation {
     animation-name: arrow-move-left;
-    animation-duration: 933ms;
+    animation-duration: 500ms;
     animation-fill-mode: forwards;
 }
 
@@ -54,6 +56,11 @@
         font-size: 78px;
         margin-top: 0px;
         margin-bottom: 30px;
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            color: #FF9900;
+        }
     }
 
     span {

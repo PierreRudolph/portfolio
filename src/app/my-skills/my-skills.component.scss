@@ -2,7 +2,10 @@
     position: relative;
     height: 408px;
     width: 100%;
+
+
 }
+
 
 .arrow-left {
     position: absolute;
@@ -18,12 +21,14 @@
     background-repeat: no-repeat;
     background-position: bottom left;
 
-    animation-name: arrow-move-left;
-    animation-duration: 933ms;
-    animation-fill-mode: forwards;
+
 }
 
-
+.arrow-animation {
+    animation-name: arrow-move-left;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
 
 @keyframes arrow-move-left {
     0% {
@@ -63,7 +68,11 @@
         padding-left: 22px;
         padding-right: 22px;
         left: 444px;
+        transition: all 125ms ease-in-out;
 
+        &:hover {
+            color: #FF9900;
+        }
     }
 }
 

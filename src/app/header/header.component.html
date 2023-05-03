@@ -1,4 +1,32 @@
 <header>
     <img src="assets/layout/logo.svg">
-    <img src="assets/layout/burger-menu.svg">
+    <!--<img class="burger-menu-btn" (click)="menuActive = !menuActive" src="assets/layout/burger-menu.svg">
+    -->
+    <div class="burger-menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </header>
+
+<div class="menu-div" [class.menu-active]="menuActive">
+
+
+    <div class="menu-links" [class.menu-links-animation]="menuActive">
+        <div class="menu-link">
+            <h2><span></span>About me</h2>
+        </div>
+
+        <div class="menu-link">
+            <h2><span></span>My skills</h2>
+        </div>
+
+        <div class="menu-link">
+            <h2><span></span>Portfolio</h2>
+        </div>
+    </div>
+
+    <h2 class="sayhi-headline">Say Hi!</h2>
+
+    <app-footer class="menu-footer"></app-footer>
+</div>

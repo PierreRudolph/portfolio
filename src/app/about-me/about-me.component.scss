@@ -9,6 +9,11 @@
         font-style: normal;
         font-weight: 800;
         font-size: 78px;
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            color: #FF9900;
+        }
     }
 
     span {

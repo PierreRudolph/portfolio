@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent {
-
+  arrowAnimation: boolean = false;
 }

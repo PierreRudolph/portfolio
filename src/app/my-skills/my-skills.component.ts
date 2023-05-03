@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-skills.component.scss']
 })
 export class MySkillsComponent {
-  iconAnimation: boolean = false;
+  arrowAnimation: boolean = false;
+
 }

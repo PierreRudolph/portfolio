@@ -17,13 +17,13 @@
     background-image: url('../../assets/layout/long-arrow-left.svg');
     background-repeat: no-repeat;
     background-position: bottom left;
-
-    animation-name: arrow-move-left;
-    animation-duration: 933ms;
-    animation-fill-mode: forwards;
 }
 
-
+.arrow-animation {
+    animation-name: arrow-move-left;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
 
 @keyframes arrow-move-left {
     0% {
@@ -53,6 +53,11 @@
         font-family: 'Syne', 'Arial', 'Verdana', sans-serif;
         font-size: 78px;
         font-weight: 800;
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            color: #FF9900;
+        }
     }
 }
 

@@ -11,6 +11,7 @@
 
 .header {
     width: 100%;
+    position: relative;
 }
 
 .above-fold {
@@ -59,7 +60,9 @@
     background-color: black;
     display: flex;
     justify-content: space-between;
-    width: 1640px;
+    width: 100%;
     padding-bottom: 60px;
     height: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
 }

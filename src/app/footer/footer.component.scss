@@ -21,8 +21,37 @@
     height: 100%;
     align-items: flex-end;
 
+
+}
+
+.legal-notice {
+    cursor: pointer;
+    text-align: center;
+    width: 130px;
+    margin-top: 15px;
+
+    &:hover {
+        div {
+            transform: translateX(55px) scale(1);
+            opacity: 1;
+        }
+    }
+
     a {
-        color: white
+        color: white;
+
+        &:hover {
+            font-weight: 700;
+        }
+    }
+
+    div {
+        transition: all 125ms ease-in-out;
+        width: 55.5px;
+        border: 2px solid #FF9900;
+        transform: scale(0.5) translateX(50px);
+        opacity: 0;
+        margin-top: 5px;
     }
 }
 
@@ -31,7 +60,17 @@
     justify-content: space-around;
     width: 205px;
 
-    img {
-        width: 40px;
+    div {
+        img {
+            cursor: pointer;
+            width: 40px;
+            transition: all 125ms ease-in-out;
+        }
+
+        &:hover {
+            img {
+                transform: translateY(-20px);
+            }
+        }
     }
 }

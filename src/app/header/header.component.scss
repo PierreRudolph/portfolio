@@ -55,7 +55,7 @@ header {
 }
 
 .menu-links-animation {
-    animation: moving-up 125ms ease-in-out 125ms forwards;
+    animation: moving-up 225ms ease-in-out 125ms forwards;
 }
 
 @keyframes moving-up {
@@ -168,6 +168,8 @@ header {
     }
 }
 
+
+
 .sayhi-headline {
     font-size: 78px;
     font-weight: 800;
@@ -203,6 +205,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     height: 30px;
 
     span {
@@ -210,5 +213,194 @@ header {
         height: 0px;
         width: 40px;
         border: 2px solid black;
+
+    }
+}
+
+.burger-up {
+    animation-name: burger-up-animation;
+    animation-duration: 500ms;
+    animation-delay: 125ms;
+    animation-fill-mode: forwards;
+}
+
+.burger-down {
+    animation-name: burger-down-animation;
+    animation-duration: 500ms;
+    animation-delay: 125ms;
+    animation-fill-mode: forwards;
+}
+
+.burger-middle {
+    animation-name: burger-middle-animation;
+    animation-duration: 500ms;
+    animation-delay: 125ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes burger-middle-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes burger-up-animation {
+    0% {
+        width: 40px;
+    }
+
+    10% {
+        width: 20px;
+        transform: translateX(0px);
+    }
+
+    20% {
+        width: 20px;
+        transform: translateX(10px) rotate(0deg);
+    }
+
+    50% {
+        width: 20px;
+        transform: translateX(10px) rotate(-45deg);
+    }
+
+    90% {
+        transform: translateX(10px) rotate(-45deg) translateY(0px);
+    }
+
+    100% {
+        width: 20px;
+        transform: translateX(4px) rotate(-44deg) translateY(6px);
+    }
+}
+
+@keyframes burger-down-animation {
+    0% {
+        width: 40px;
+        transform: translateX(0px);
+    }
+
+    10% {
+        width: 20px;
+        transform: translateX(0px);
+    }
+
+    20% {
+        width: 20px;
+        transform: translateX(-10px) rotate(0deg);
+    }
+
+    50% {
+        width: 20px;
+        transform: translateX(-10px) rotate(-45deg);
+    }
+
+    90% {
+        transform: translateX(-10px) rotate(-45deg) translateY(0px);
+    }
+
+    100% {
+        width: 20px;
+        transform: translateX(-3px) rotate(-45deg) translateY(-9px);
+
+    }
+}
+
+.burger-up-reverse {
+    animation-name: burger-up-reverse-animation;
+    animation-duration: 225ms;
+    animation-delay: 0ms;
+    animation-fill-mode: backwards;
+    animation-direction: reverse;
+}
+
+.burger-middle-reverse {
+    animation-name: burger-middle-reverse-animation;
+    animation-duration: 225ms;
+    animation-delay: 0ms;
+    animation-fill-mode: backwards;
+    animation-direction: reverse;
+}
+
+.burger-down-reverse {
+    animation-name: burger-down-reverse-animation;
+    animation-duration: 225ms;
+    animation-delay: 0ms;
+    animation-fill-mode: backwards;
+    animation-direction: reverse;
+}
+
+@keyframes burger-up-reverse-animation {
+    0% {
+        width: 40px;
+    }
+
+    10% {
+        width: 20px;
+        transform: translateX(0px);
+    }
+
+    20% {
+        width: 20px;
+        transform: translateX(10px) rotate(0deg);
+    }
+
+    50% {
+        width: 20px;
+        transform: translateX(10px) rotate(-45deg);
+    }
+
+    90% {
+        transform: translateX(10px) rotate(-45deg) translateY(0px);
+    }
+
+    100% {
+        width: 20px;
+        transform: translateX(4px) rotate(-44deg) translateY(6px);
+    }
+}
+
+@keyframes burger-middle-reverse-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes burger-down-reverse-animation {
+    0% {
+        width: 40px;
+        transform: translateX(0px);
+    }
+
+    10% {
+        width: 20px;
+        transform: translateX(0px);
+    }
+
+    20% {
+        width: 20px;
+        transform: translateX(-10px) rotate(0deg);
+    }
+
+    50% {
+        width: 20px;
+        transform: translateX(-10px) rotate(-45deg);
+    }
+
+    90% {
+        transform: translateX(-10px) rotate(-45deg) translateY(0px);
+    }
+
+    100% {
+        width: 20px;
+        transform: translateX(-3px) rotate(-45deg) translateY(-9px);
     }
 }

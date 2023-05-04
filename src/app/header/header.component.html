@@ -2,10 +2,10 @@
     <img src="assets/layout/logo.svg">
     <!--<img class="burger-menu-btn" (click)="menuActive = !menuActive" src="assets/layout/burger-menu.svg">
     -->
-    <div class="burger-menu-button">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div (click)="menuActive = !menuActive" class="burger-menu-button">
+        <span [ngClass]="menuActive ? 'burger-up':'burger-up-reverse'"></span>
+        <span [ngClass]="menuActive ? 'burger-middle':'burger-middle-reverse'"></span>
+        <span [ngClass]="menuActive ? 'burger-down':'burger-down-reverse'"></span>
     </div>
 </header>
 

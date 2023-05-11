@@ -43,6 +43,7 @@ header {
 }
 
 .menu-links {
+    cursor: pointer;
     position: absolute;
     left: auto;
     right: auto;
@@ -79,6 +80,11 @@ header {
         position: relative;
         margin: 0px;
         padding: 40px;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
     }
 
     span::before {
@@ -171,6 +177,7 @@ header {
 
 
 .sayhi-headline {
+    cursor: pointer;
     font-size: 78px;
     font-weight: 800;
     font-family: 'Syne', 'Arial', 'Verdana', sans-serif;
@@ -182,6 +189,7 @@ header {
     background-color: black;
     z-index: 1;
     transition: all 125ms ease-in-out;
+    text-decoration: none;
 
     &:hover {
         color: #FF9900;
@@ -202,6 +210,7 @@ header {
 }
 
 .burger-menu-button {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -311,27 +320,22 @@ header {
 }
 
 .burger-up-reverse {
-    animation-name: burger-up-reverse-animation;
-    animation-duration: 225ms;
-    animation-delay: 0ms;
-    animation-fill-mode: backwards;
-    animation-direction: reverse;
+    animation: burger-up-reverse-animation 225ms ease-in-out 0ms 1 reverse backwards;
 }
 
 .burger-middle-reverse {
-    animation-name: burger-middle-reverse-animation;
+    animation: burger-middle-reverse-animation 225ms ease-in-out 0ms 1 reverse backwards;
+    /*animation-name: burger-middle-reverse-animation;
     animation-duration: 225ms;
     animation-delay: 0ms;
     animation-fill-mode: backwards;
     animation-direction: reverse;
+    animation-iteration-count: 1;*/
 }
 
 .burger-down-reverse {
-    animation-name: burger-down-reverse-animation;
-    animation-duration: 225ms;
-    animation-delay: 0ms;
-    animation-fill-mode: backwards;
-    animation-direction: reverse;
+    animation: burger-down-reverse-animation 225ms ease-in-out 0ms 1 reverse backwards;
+
 }
 
 @keyframes burger-up-reverse-animation {

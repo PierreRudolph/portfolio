@@ -1,15 +1,15 @@
-.project-container {
+.project-container-left {
     position: relative;
     z-index: 1;
     width: 100%;
 
     &:hover {
-        .border-div {
+        .border-div-left {
             opacity: 1;
             pointer-events: all;
         }
 
-        .cyrcle-arrow {
+        .cyrcle-arrow-left {
             transform: rotate(0deg) scale(1.7) !important;
         }
 
@@ -22,7 +22,7 @@
             transform: translateY(-2px);
         }
 
-        .project-info {
+        .project-info-left {
             left: 800px;
         }
 
@@ -38,7 +38,7 @@
     filter: grayscale(100%);
 }
 
-.border-div {
+.border-div-left {
     opacity: 0;
     background-color: transparent;
     border: 5px solid black;
@@ -51,7 +51,7 @@
     pointer-events: none;
 }
 
-.cyrcle-arrow {
+.cyrcle-arrow-left {
     position: absolute;
     right: -25px;
     top: 172px;
@@ -89,7 +89,7 @@
     }
 }
 
-.project-info {
+.project-info-left {
     width: 340px;
     position: absolute;
     top: 0px;

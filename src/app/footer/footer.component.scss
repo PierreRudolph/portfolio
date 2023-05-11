@@ -61,8 +61,9 @@
     width: 205px;
 
     div {
+        cursor: pointer;
+
         img {
-            cursor: pointer;
             width: 40px;
             transition: all 125ms ease-in-out;
         }

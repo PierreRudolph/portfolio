@@ -84,9 +84,16 @@
     @media (max-width:1350px) {
         margin-top: 110px;
     }
+
+    @media (max-width:1250px) {
+        justify-content: flex-end;
+        flex-direction: column-reverse;
+        height: 800px;
+        width: unset;
+    }
 }
 
 .right {
-    flex-direction: row-reverse;
-
+    flex-direction: column-reverse;
+    align-items: flex-end;
 }

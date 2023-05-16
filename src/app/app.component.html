@@ -1,4 +1,6 @@
-<div class="main-div">
+<div (mousemove)="onMouseMove($event)" class="main-div">
+    <div [style.left]="(cyrclePosX-500)+'px'" [style.top]="(cyrclePosY-250)+'px'" class="mouse-cyrcle"></div>
+
     <app-header class="header"></app-header>
     <app-above-fold class="above-fold"></app-above-fold>
     <app-about-me class="about-me"></app-about-me>

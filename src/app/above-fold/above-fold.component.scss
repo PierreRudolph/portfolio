@@ -6,6 +6,10 @@ h1 {
     letter-spacing: -0.025em;
     text-align: center;
     margin-bottom: 0px;
+
+    @media (max-width:1350px) {
+        font-size: 102px;
+    }
 }
 
 .below-headline-div {
@@ -19,6 +23,10 @@ h1 {
         font-weight: 700;
         margin: 0px;
         margin-top: 5px;
+
+        @media (max-width:1350px) {
+            font-size: 39px;
+        }
     }
 }
 
@@ -26,6 +34,10 @@ h1 {
     width: 628px;
     border: 3px solid black;
     margin-right: 10px;
+
+    @media (max-width:1350px) {
+        width: 503px;
+    }
 }
 
 .bottom-div {

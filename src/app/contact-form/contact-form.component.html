@@ -10,12 +10,30 @@
 
 <div class="contact-field">
     <p>Want to discuss a new project?</p>
-    <span>Say hello! let's discuss your ideas and make it happen</span>
+    <span class="second-headline">Say hello! let's discuss your ideas and make it happen</span>
 
-    <form class="contact-form">
-        <input placeholder="Your name">
-        <input placeholder="Your email">
-        <textarea placeholder="Your message"></textarea>
-        <button class="button-black">Send message</button>
+    <form (submit)="sendMail()" class="contact-form" ngNativeValidate #myForm>
+        <div>
+            <input pattern="([a-zA-ZäöüÄÖÜß]+)" type="text" title="Please do not enter numbers or special characters."
+                minlength="4" maxlength="16" placeholder="Your name" (ngModel)="name" name="name" #nameInput required>
+            <span>Your name is required</span>
+        </div>
+
+        <div>
+            <input placeholder="Your email" type="email" title="Please enter a valid email address."
+                pattern="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\u0022(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*\u0022)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"
+                name="email" #emailInput required>
+            <span>Your email is required</span>
+        </div>
+
+        <div id="textarea-container">
+            <textarea placeholder="Your message" type="text" minlength="30" maxlength="116"
+                title="Please enter your concerns." name="message" #messageInput required></textarea>
+            <span>Your message is empty</span>
+        </div>
+
+        <div id="button-container">
+            <button type="submit" class="button-black" #sendButton>Send message</button>
+        </div>
     </form>
 </div>

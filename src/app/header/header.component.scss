@@ -30,10 +30,17 @@ header {
 
     @media (max-width:1440px) {
         width: calc(100vw - 100px);
+        left: -50px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     @media (max-width:1350px) {
         height: 761px;
+    }
+
+    @media (max-width:800px) {
+        height: calc(100vh - 93px);
     }
 }
 
@@ -77,6 +84,10 @@ header {
     @media (max-width:1350px) {
         animation: moving-up-mobile-1350 225ms ease-in-out 125ms forwards;
     }
+
+    @media (max-width:800px) {
+        animation: moving-up-mobile-800 225ms ease-in-out 125ms forwards;
+    }
 }
 
 @keyframes moving-up {
@@ -98,6 +109,16 @@ header {
 
     100% {
         bottom: 185px;
+    }
+}
+
+@keyframes moving-up-mobile-800 {
+    0% {
+        bottom: 70px;
+    }
+
+    100% {
+        bottom: 485px;
     }
 }
 
@@ -233,6 +254,10 @@ header {
         color: #FF9900;
     }
 
+    @media (max-width:1440px) {
+        padding-left: 50px;
+    }
+
     @media (max-width:1350px) {
         font-size: 62px;
     }
@@ -250,11 +275,17 @@ header {
     position: absolute;
     bottom: 0px;
 
+    @media (max-width:1640px) {
+        width: 1240px;
+    }
+
     @media (max-width:1440px) {
         padding-left: 50px;
         padding-right: 50px;
         width: calc(100vw - 100px);
     }
+
+
 }
 
 

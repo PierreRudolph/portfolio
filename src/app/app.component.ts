@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ export class AppComponent {
 
   cyrclePosX: number = 0;
   cyrclePosY: number = 0;
+
 
   onMouseMove(event: MouseEvent) {
     this.cyrclePosX = event.pageX;

@@ -66,6 +66,10 @@
         @media (max-width:1350px) {
             font-size: 62px;
         }
+
+        @media (max-width:880px) {
+            font-size: 47px;
+        }
     }
 }
 
@@ -123,6 +127,7 @@
             &::placeholder {
                 color: white !important;
                 opacity: 1;
+                letter-spacing: 2px;
             }
 
             &:hover {
@@ -170,6 +175,7 @@
         &::placeholder {
             color: white !important;
             opacity: 1;
+            letter-spacing: 2px;
         }
 
 

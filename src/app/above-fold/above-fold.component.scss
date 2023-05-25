@@ -10,6 +10,15 @@ h1 {
     @media (max-width:1350px) {
         font-size: 102px;
     }
+
+    @media (max-width:880px) {
+        font-size: 77px;
+        margin-top: 150px;
+    }
+
+    @media (max-width:700px) {
+        font-size: 59px;
+    }
 }
 
 .below-headline-div {
@@ -27,6 +36,10 @@ h1 {
         @media (max-width:1350px) {
             font-size: 39px;
         }
+
+        @media (max-width:700px) {
+            font-size: 29px;
+        }
     }
 }
 
@@ -38,6 +51,14 @@ h1 {
     @media (max-width:1350px) {
         width: 503px;
     }
+
+    @media (max-width:880px) {
+        width: 272px;
+    }
+
+    @media (max-width:700px) {
+        width: 208px;
+    }
 }
 
 .bottom-div {
@@ -45,6 +66,10 @@ h1 {
     display: flex;
     justify-content: space-between;
     margin-top: 150px;
+
+    @media (max-width:880px) {
+        margin-top: auto;
+    }
 }
 
 .email-adress {
@@ -108,4 +133,8 @@ h1 {
     100% {
         transform: translateY(50px);
     }
+}
+
+.above-field-button {
+    margin-top: 125px;
 }

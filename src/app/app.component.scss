@@ -9,6 +9,7 @@
     padding-right: 100px;
     position: relative;
 
+
     @media (max-width:1640px) {
         width: 1240px;
     }
@@ -18,7 +19,29 @@
         padding-left: 50px;
         padding-right: 50px;
     }
+
+    &:hover {
+        .mouse-cyrcle {
+            animation: wobble 1s infinite;
+        }
+
+    }
 }
+
+@keyframes wobble {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-5px) translateY(-5px);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
 
 /*.mouse-cyrcle {
     pointer-events: none;
@@ -44,6 +67,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width:880px) {
+        height: calc(100vh - 102px);
+    }
 }
 
 .about-me {

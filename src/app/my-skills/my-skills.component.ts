@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Element } from '@angular/compiler';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-my-skills',
   templateUrl: './my-skills.component.html',
   styleUrls: ['./my-skills.component.scss']
 })
-export class MySkillsComponent {
-  arrowAnimation: boolean = false;
-
+export default class MySkillsComponent {
+  public arrowAnimation: boolean = false;
 }

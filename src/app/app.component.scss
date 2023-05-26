@@ -1,14 +1,14 @@
 .main-div {
     background-color: #FFFCF3;
     width: 1440px;
-    height: fit-content;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-left: 100px;
     padding-right: 100px;
     position: relative;
-
+    overflow: scroll;
 
     @media (max-width:1640px) {
         width: 1240px;

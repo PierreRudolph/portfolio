@@ -73,11 +73,19 @@
         @media (max-width:880px) {
             font-size: 47px;
         }
+
+        @media (max-width:580px) {
+            font-size: 42px;
+        }
     }
 
     span {
         font-weight: 400;
         font-size: 23px;
+    }
+
+    @media (max-width:590px) {
+        width: 100%;
     }
 }
 
@@ -99,6 +107,15 @@
         height: 800px;
         width: unset;
         margin-top: 70px;
+    }
+
+    @media (max-width:700px) {
+        height: 750px;
+        margin-top: 30px;
+    }
+
+    @media (max-width:480px) {
+        height: 660px;
     }
 }
 

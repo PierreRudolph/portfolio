@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-about-me',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent {
+  mobileStyle = false;
 
+  constructor() {
+    this.checkScreenSize()
+  }
+
+  @HostListener('window:resize')
+  onWindowResize() {
+    this.checkScreenSize();
+  }
+  checkScreenSize() {
+    this.mobileStyle = window.innerWidth > 580;
+  }
 }

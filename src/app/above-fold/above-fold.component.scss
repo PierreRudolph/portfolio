@@ -19,6 +19,10 @@ h1 {
     @media (max-width:700px) {
         font-size: 59px;
     }
+
+    @media (max-width:580px) {
+        font-size: 45px;
+    }
 }
 
 .below-headline-div {
@@ -40,6 +44,10 @@ h1 {
         @media (max-width:700px) {
             font-size: 29px;
         }
+
+        @media (max-width:580px) {
+            font-size: 23px;
+        }
     }
 }
 
@@ -58,6 +66,11 @@ h1 {
 
     @media (max-width:700px) {
         width: 208px;
+        border: 2px solid black;
+    }
+
+    @media (max-width:580px) {
+        width: 150px;
     }
 }
 
@@ -137,4 +150,5 @@ h1 {
 
 .above-field-button {
     margin-top: 125px;
+    margin-bottom: 60px;
 }

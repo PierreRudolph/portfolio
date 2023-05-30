@@ -22,6 +22,10 @@
         @media (max-width:880px) {
             font-size: 47px;
         }
+
+        @media (max-width:580px) {
+            font-size: 42px;
+        }
     }
 
     span {
@@ -35,6 +39,10 @@
 
     @media (max-width:1350px) {
         width: 580px;
+    }
+
+    @media (max-width:630px) {
+        width: 100%;
     }
 
 }
@@ -61,6 +69,10 @@
         width: 421px;
         margin-top: 150px;
     }
+
+    @media (max-width:580px) {
+        width: 340px;
+    }
 }
 
 .profil-img {
@@ -86,5 +98,10 @@
     @media (max-width:1350px) {
         width: 421px;
         height: 421px;
+    }
+
+    @media (max-width:580px) {
+        width: 340px;
+        height: 340px;
     }
 }

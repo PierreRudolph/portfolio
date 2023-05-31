@@ -97,37 +97,34 @@ header {
 .menu-links-animation {
     animation: moving-up 225ms ease-in-out 125ms forwards;
 
-    /*@media (max-width:1350px) {
+    @media (max-width:1350px) {
         animation: moving-up-mobile-1350 225ms ease-in-out 125ms forwards;
     }
 
     @media (max-width:800px) {
         animation: moving-up-mobile-800 225ms ease-in-out 125ms forwards;
-    }*/
+    }
 }
 
 @keyframes moving-up {
     0% {
-        bottom: 10%;
+        bottom: 70px;
     }
 
     100% {
-        bottom: 38%;
+        bottom: 150px;
 
-        @media (max-width:400px) {
-            bottom: 30%;
-        }
     }
 }
 
-/*
+
 @keyframes moving-up-mobile-1350 {
     0% {
         bottom: 70px;
     }
 
     100% {
-        bottom: 185px;
+        bottom: 250px;
     }
 }
 
@@ -137,9 +134,9 @@ header {
     }
 
     100% {
-        bottom: 390px;
+        bottom: 260px;
     }
-}*/
+}
 
 .menu-link {
     width: 100%;

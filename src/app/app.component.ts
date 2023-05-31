@@ -73,7 +73,7 @@ export class AppComponent {
   handleScrollUp() {
     if (this.mobileStyle)
       return;
-
+      console.log(this.lastScrollTop);
     if (this.lastScrollTop < 580)
       this.skillsComponent.arrowAnimation = false;
 

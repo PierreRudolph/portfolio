@@ -1,5 +1,5 @@
 import { Component, HostListener, ViewChild } from '@angular/core';
-import MySkillsComponent from './my-skills/my-skills.component';
+import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 
@@ -10,6 +10,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 })
 export class AppComponent {
   title = 'Portfolio';
+  menuActiveParent: boolean = false;
 
   cyrclePosX: number = 0;
   cyrclePosY: number = 0;
@@ -29,6 +30,7 @@ export class AppComponent {
 
   constructor() {
     this.checkScreenSize();
+
   }
 
   @HostListener('window:resize')
@@ -73,7 +75,7 @@ export class AppComponent {
   handleScrollUp() {
     if (this.mobileStyle)
       return;
-      console.log(this.lastScrollTop);
+    console.log(this.lastScrollTop);
     if (this.lastScrollTop < 580)
       this.skillsComponent.arrowAnimation = false;
 

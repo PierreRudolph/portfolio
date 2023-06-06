@@ -1,4 +1,5 @@
-import { Component, ElementRef, Renderer2, ViewChild, inject } from '@angular/core';
+import { Component, Renderer2, ViewChild } from '@angular/core';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-header',
@@ -6,32 +7,34 @@ import { Component, ElementRef, Renderer2, ViewChild, inject } from '@angular/co
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  menuActive: boolean = false;
   menuBtnClick: boolean = false;
+  menuActive: boolean = false;
 
+  @ViewChild(FooterComponent)
+  footerComponent!: FooterComponent;
 
   constructor(private renderer: Renderer2) {
 
     this.renderer.listen('window', 'click', (e: Event) => {
       if (!this.menuBtnClick) {
-        this.menuActive = false;
+        this.toggleMenu();
       }
       this.menuBtnClick = false;
     });
-
   }
-
 
   toggleMenu() {
     this.menuActive = !this.menuActive;
+    this.emitToggleToFooter();
   }
 
+  emitToggleToFooter() {
+    this.footerComponent.headerMenuActive = this.menuActive;
+  }
 
   preventCloseOnClick() {
     this.menuBtnClick = true;
   }
-
-
 }
 
 

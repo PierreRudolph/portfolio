@@ -1,15 +1,19 @@
-<div class="logo-name">
-    <img src="assets/layout/logo-white.svg">
-    <span>© Pierre Lettner 2023</span>
-</div>
+<div class="logo-social-logos">
 
-<div class="footer-right">
+    <img *ngIf="!headerMenuActive" src="assets/layout/logo-white.svg">
+
     <div class="social-btns">
         <div><img src="assets/layout/git-btn.svg"></div>
         <div><img src="assets/layout/email-btn.svg"></div>
         <div><img src="assets/layout/linkedin-btn.svg"></div>
     </div>
-    <div class="legal-notice">
+</div>
+<div class="name-legal-notice">
+
+    <span *ngIf="!mobileStyle && !headerMenuActive">© Pierre Lettner 2023</span>
+    <span *ngIf="mobileStyle || headerMenuActive">PLettner@Hotmail.de</span>
+
+    <div *ngIf="!headerMenuActive" class="legal-notice">
         <a>Legal Notice</a>
         <div></div>
     </div>

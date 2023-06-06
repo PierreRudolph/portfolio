@@ -1,6 +1,6 @@
 <header>
     <img src="assets/layout/logo.svg">
-    <div (click)="menuActive = !menuActive;preventCloseOnClick()" class="burger-menu-button">
+    <div (click)="toggleMenu();preventCloseOnClick()" class="burger-menu-button">
         <span [ngClass]="menuActive ? 'burger-up':'burger-up-reverse'"></span>
         <span [ngClass]="menuActive ? 'burger-middle':'burger-middle-reverse'"></span>
         <span [ngClass]="menuActive ? 'burger-down':'burger-down-reverse'"></span>
@@ -8,22 +8,22 @@
 </header>
 
 <div class="menu-div" [class.menu-active]="menuActive">
+    <div class="menu-links-outer-div">
+        <div class="menu-links" [class.menu-links-animation]="menuActive">
+            <div class="menu-link">
+                <h2><span></span><a href="#about-me">About me</a>
+                </h2>
+            </div>
 
-    <div class="menu-links" [class.menu-links-animation]="menuActive">
-        <div class="menu-link">
-            <h2><span></span><a href="#about-me">About me</a>
-            </h2>
-        </div>
+            <div class="menu-link">
+                <h2><span></span><a href="#my-skills">My skills</a></h2>
+            </div>
 
-        <div class="menu-link">
-            <h2><span></span><a href="#my-skills">My skills</a></h2>
-        </div>
-
-        <div class="menu-link">
-            <h2><span></span><a href="#portfolio">Portfolio</a></h2>
+            <div class="menu-link">
+                <h2><span></span><a href="#portfolio">Portfolio</a></h2>
+            </div>
         </div>
     </div>
-
     <a class="sayhi-headline" href="#say-hi">Say Hi!</a>
 
     <app-footer class="menu-footer"></app-footer>

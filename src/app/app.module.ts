@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AboveFoldComponent } from './above-fold/above-fold.component';
 import { AboutMeComponent } from './about-me/about-me.component';
-import MySkillsComponent from './my-skills/my-skills.component';
+import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ProjectPreviewComponent } from './project-preview/project-preview.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';

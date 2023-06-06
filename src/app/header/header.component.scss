@@ -24,6 +24,10 @@ header {
     display: none;
     opacity: 0;
 
+    @media (max-width:1640px) {
+        width: calc(100vw - 200px);
+    }
+
     @media (max-width:1440px) {
         width: calc(100vw - 100px);
         left: -50px;
@@ -291,11 +295,10 @@ header {
     left: 0px;
     bottom: 120px;
     color: white;
-    background-color: black;
-    z-index: 1;
     transition: all 125ms ease-in-out;
     text-decoration: none;
     padding-left: 100px;
+    z-index: 1;
 
     &:hover {
         color: #FF9900;
@@ -313,8 +316,17 @@ header {
         font-size: 47px;
     }
 
+    @media (max-width:800px) {
+        bottom: 90px;
+    }
+
+    @media (max-width:700px) {
+        padding-left: 25px;
+    }
+
     @media (max-width:580px) {
         font-size: 42px;
+        bottom: 110px;
     }
 }
 
@@ -331,13 +343,27 @@ header {
     bottom: 0px;
 
     @media (max-width:1640px) {
-        width: 1240px;
+        width: calc(100vw - 200px);
     }
 
     @media (max-width:1440px) {
+        width: calc(100vw - 100px);
         padding-left: 50px;
         padding-right: 50px;
-        width: calc(100vw - 100px);
+    }
+
+    @media (max-width:800px) {
+        padding-bottom: 25px;
+    }
+
+    @media (max-width:700px) {
+        width: calc(100vw - 50px);
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    @media (max-width:580px) {
+        flex-direction: column-reverse;
     }
 }
 

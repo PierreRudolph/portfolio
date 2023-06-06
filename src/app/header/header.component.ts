@@ -17,7 +17,8 @@ export class HeaderComponent {
 
     this.renderer.listen('window', 'click', (e: Event) => {
       if (!this.menuBtnClick) {
-        this.toggleMenu();
+        this.menuActive = false;
+        this.emitToggleToFooter();
       }
       this.menuBtnClick = false;
     });

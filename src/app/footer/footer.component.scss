@@ -6,12 +6,13 @@
     img {
         width: 66px;
     }
+}
 
+.logo-social-logos-mobile {
     @media (max-width:500px) {
         flex-direction: column-reverse;
         height: 100px;
     }
-
 }
 
 .name-legal-notice {
@@ -25,7 +26,9 @@
         color: white;
         font-size: 23px;
     }
+}
 
+.name-legal-notice-mobile {
     @media (max-width:500px) {
         flex-direction: column;
         height: 80px;
@@ -82,5 +85,12 @@
                 transform: translateY(-20px);
             }
         }
+    }
+}
+
+.social-btns-mobile {
+    @media (max-width:500px) {
+        margin-bottom: 25px;
+        margin-left: unset;
     }
 }

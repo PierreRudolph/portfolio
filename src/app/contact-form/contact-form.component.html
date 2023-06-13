@@ -17,10 +17,10 @@
 
             <span *ngIf="nameInput.dirty && nameInput.value" class="name-input-headline">Your name</span>
 
-            <img *ngIf="!nameInput.valid  && (nameInput.dirty || nameInput.touched)" src="../../assets/layout/fail.svg"
+            <img *ngIf="!nameInput.valid  && (nameInput.dirty || nameInput.touched)" src="assets/layout/fail.svg"
                 class="name-validation-img">
 
-            <img *ngIf="nameInput.valid  && (nameInput.dirty || nameInput.touched)" src="../../assets/layout/sucess.svg"
+            <img *ngIf="nameInput.valid  && (nameInput.dirty || nameInput.touched)" src="assets/layout/sucess.svg"
                 class="name-validation-img">
 
             <input [class.input-border]="nameInput.value" pattern="([a-zA-ZäöüÄÖÜß]+\s?)+" name="name" type="text"
@@ -40,11 +40,11 @@
 
             <span *ngIf="emailInput.dirty && emailInput.value" class="input-headline">Your email</span>
 
-            <img *ngIf="!emailInput.valid  && (emailInput.dirty || emailInput.touched)"
-                src="../../assets/layout/fail.svg" class="validation-img">
+            <img *ngIf="!emailInput.valid  && (emailInput.dirty || emailInput.touched)" src="assets/layout/fail.svg"
+                class="validation-img">
 
-            <img *ngIf="emailInput.valid  && (emailInput.dirty || emailInput.touched)"
-                src="../../assets/layout/sucess.svg" class="validation-img">
+            <img *ngIf="emailInput.valid  && (emailInput.dirty || emailInput.touched)" src="assets/layout/sucess.svg"
+                class="validation-img">
 
             <input [class.input-border]="emailInput.value" placeholder="Your email" type="email"
                 title="Please enter a valid email address."
@@ -63,11 +63,11 @@
 
             <span *ngIf="messageInput.dirty && messageInput.value" class="input-headline">Your message</span>
 
-            <img *ngIf="!messageInput.valid && messageInput.touched" src="../../assets/layout/fail.svg"
+            <img *ngIf="!messageInput.valid && messageInput.touched" src="assets/layout/fail.svg"
                 class="validation-img">
 
             <img *ngIf="messageInput.valid  && (messageInput.dirty || messageInput.touched)"
-                src="../../assets/layout/sucess.svg" class="validation-img">
+                src="assets/layout/sucess.svg" class="validation-img">
 
             <textarea [class.input-border]="messageInput.value" placeholder="Your message" id="messageInput" type="text"
                 minlength="1" maxlength="116" title="Please enter your concerns." name="message" [(ngModel)]="message"
@@ -82,4 +82,8 @@
                 message</button>
         </div>
     </form>
+
+    <a href="#above-fold" class="scroll-up-arrow">
+        <img src="assets/layout/scroll-up-arrow.svg">
+    </a>
 </div>

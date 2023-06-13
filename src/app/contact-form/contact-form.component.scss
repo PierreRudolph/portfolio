@@ -274,3 +274,34 @@
 .show-warn {
     transform: translateY(-20px);
 }
+
+.scroll-up-arrow {
+    cursor: pointer;
+    position: absolute;
+    right: 100px;
+    bottom: 70px;
+    height: 110px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    img {
+        transition: all 200ms ease-in 25ms;
+        transform: translateY(20px);
+    }
+
+    &:hover {
+        img {
+            transform: translateY(0px);
+        }
+    }
+
+    @media (max-width:1440px) {
+        right: 50px;
+    }
+
+    @media (max-width:880px) {
+        display: none;
+    }
+}

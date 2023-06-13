@@ -7,11 +7,35 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class ContactFormComponent {
   arrowAnimation: boolean = false;
-  name!: string;
+  name: any;
   email!: string;
   message!: string;
 
-  @ViewChild('myForm')
+  submitted = false;
+
+
+  model = {
+    name: '',
+    email: '',
+    message: '',
+  }
+
+
+  async onSubmit() {
+    let fd = new FormData();
+    fd.append('name', this.name);
+    fd.append('message', this.message);
+    this.submitted = true;
+    await fetch('https://pierre-lettner.de/Portfolio/send_mail.php',
+      {
+        method: 'POST',
+        body: fd
+      }
+    );
+    this.submitted = false;
+  }
+
+  /*@ViewChild('myForm')
   myForm!: ElementRef;
 
   @ViewChild('nameInput')
@@ -26,6 +50,7 @@ export class ContactFormComponent {
   @ViewChild('sendButton')
   sendButton!: ElementRef;
 
+  allowedCharacters = ['a', 'A']
 
   async sendMail() {
     console.log('sending mail', this.myForm);
@@ -52,5 +77,5 @@ export class ContactFormComponent {
     emailInput.disabled = false;
     messageInput.disabled = false;
     sendButton.disabled = false;
-  }
+  }*/
 }

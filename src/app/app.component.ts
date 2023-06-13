@@ -68,7 +68,7 @@ export class AppComponent {
     if (this.lastScrollTop > 1900)
       this.portfolioComponent.arrowAnimation = true;
 
-    if (this.lastScrollTop > 3333)
+    if (this.lastScrollTop > 3533)
       this.contactComponent.arrowAnimation = true;
   }
 

@@ -76,6 +76,7 @@
 
         @media (max-width:880px) {
             font-size: 47px;
+            animation: mobile-font-flash-black 3s steps(2, jump-none) infinite;
         }
 
         @media (max-width:580px) {
@@ -125,5 +126,4 @@
 
 .right {
     flex-direction: column-reverse;
-    align-items: flex-end;
 }

@@ -12,7 +12,7 @@
     <p>Want to discuss a new project?</p>
     <span class="second-headline">Say hello! let's discuss your ideas and make it happen</span>
 
-    <form (ngSubmit)="onSubmit()" class="contact-form" #myForm="ngForm">
+    <form (ngSubmit)="onSubmit();myForm.resetForm()" class="contact-form" #myForm="ngForm">
         <div class="input-name">
 
             <span *ngIf="nameInput.dirty && nameInput.value" class="name-input-headline">Your name</span>
@@ -69,6 +69,8 @@
             <img *ngIf="messageInput.valid  && (messageInput.dirty || messageInput.touched)"
                 src="assets/layout/sucess.svg" class="validation-img">
 
+            <!--(keydown.enter)="onSubmit(); myForm.resetForm()"
+                Versuch form bei Enter zu Versenden, übergeht aber validierung. -->
             <textarea [class.input-border]="messageInput.value" placeholder="Your message" id="messageInput" type="text"
                 minlength="1" maxlength="116" title="Please enter your concerns." name="message" [(ngModel)]="message"
                 #messageInput="ngModel" required></textarea>
@@ -78,8 +80,12 @@
         </div>
 
         <div id="button-container">
-            <button type="submit" [disabled]="!myForm.form.valid || submitted" class="button-black" #sendButton>Send
-                message</button>
+            <button type="submit" [disabled]="!myForm.form.valid || sendingMessage || successfullySubmitted"
+                class="button-black" #sendButton>
+                <span *ngIf="!sendingMessage&&!successfullySubmitted">Send message</span>
+                <span *ngIf="sendingMessage">Sending message...</span>
+                <span *ngIf="successfullySubmitted">Message Successfully Submitted!</span>
+            </button>
         </div>
     </form>
 

@@ -21,6 +21,7 @@
 
         @media (max-width:880px) {
             font-size: 47px;
+            animation: mobile-font-flash-black 3s steps(2, jump-none) infinite;
         }
 
         @media (max-width:580px) {
@@ -74,7 +75,7 @@
         width: 340px;
     }
 
-    @media (max-width:400px){
+    @media (max-width:400px) {
         width: 290px;
     }
 }

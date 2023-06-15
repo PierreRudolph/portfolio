@@ -37,3 +37,23 @@ body {
         padding: 20px 80px;
     }
 }
+
+@keyframes mobile-font-flash-white {
+    from {
+        color: white;
+    }
+
+    to {
+        color: #FF9900;
+    }
+}
+
+@keyframes mobile-font-flash-black {
+    from {
+        color: black;
+    }
+
+    to {
+        color: #FF9900;
+    }
+}

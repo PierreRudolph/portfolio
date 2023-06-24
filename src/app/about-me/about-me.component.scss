@@ -22,10 +22,15 @@
         @media (max-width:880px) {
             font-size: 47px;
             animation: mobile-font-flash-black 3s steps(2, jump-none) infinite;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
 
         @media (max-width:580px) {
             font-size: 42px;
+        }
+
+        @media (max-width:385px) {
+            font-size: 36px;
         }
     }
 
@@ -78,6 +83,10 @@
     @media (max-width:400px) {
         width: 290px;
     }
+
+    @media (max-width:385px) {
+        width: 260px;
+    }
 }
 
 .profil-img {
@@ -99,10 +108,16 @@
     width: 528px;
     height: 528px;
     pointer-events: none;
+    box-shadow: 0px 0px 6px 2px inset white;
+    box-sizing: border-box;
 
     @media (max-width:1350px) {
         width: 421px;
         height: 421px;
+    }
+
+    @media (max-width:880px) {
+        animation: mobile-border-flash 3s steps(2, jump-none) infinite;
     }
 
     @media (max-width:580px) {
@@ -113,5 +128,22 @@
     @media (max-width:400px) {
         width: 290px;
         height: 290px;
+    }
+
+    @media (max-width:385px) {
+        width: 260px;
+        height: 260px;
+    }
+}
+
+@keyframes mobile-border-flash {
+    0% {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    100% {
+        opacity: 1;
+        pointer-events: all;
     }
 }

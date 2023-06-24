@@ -7,6 +7,10 @@
     @media (max-width:400px) {
         margin-left: 170px;
     }
+
+    @media (max-width:385px) {
+        margin-left: 210px;
+    }
 }
 
 .arrow-left {
@@ -79,6 +83,10 @@
 
         @media (max-width:580px) {
             font-size: 42px;
+        }
+
+        @media (max-width:385px) {
+            font-size: 36px;
         }
     }
 }

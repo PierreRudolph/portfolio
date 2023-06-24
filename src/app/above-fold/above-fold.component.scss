@@ -23,6 +23,10 @@ h1 {
     @media (max-width:580px) {
         font-size: 45px;
     }
+
+    @media (max-width:385px) {
+        font-size: 40px;
+    }
 }
 
 .below-headline-div {
@@ -71,6 +75,10 @@ h1 {
 
     @media (max-width:580px) {
         width: 150px;
+    }
+
+    @media (max-width:385px) {
+        width: 119px;
     }
 }
 

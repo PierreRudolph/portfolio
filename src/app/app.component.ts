@@ -8,14 +8,14 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   title = 'Portfolio';
   menuActiveParent: boolean = false;
-
+  mobileStyle: boolean = false;
+  lastScrollPos: number = 0;
   cyrclePosX: number = 0;
   cyrclePosY: number = 0;
-
-  lastScrollTop = 0;
 
   @ViewChild(MySkillsComponent)
   skillsComponent!: MySkillsComponent;
@@ -26,11 +26,8 @@ export class AppComponent {
   @ViewChild(ContactFormComponent)
   contactComponent!: ContactFormComponent;
 
-  mobileStyle = false;
-
   constructor() {
     this.checkScreenSize();
-
   }
 
   @HostListener('window:resize')
@@ -38,85 +35,88 @@ export class AppComponent {
     this.checkScreenSize();
   }
 
+
   checkScreenSize() {
-    this.mobileStyle = window.innerWidth < 1100;
+    this.mobileStyle = window.innerHeight < 920;
   }
 
+
+  onMouseMove(event: MouseEvent) {
+    this.cyrclePosX = event.pageX;
+    this.cyrclePosY = event.pageY;
+  }
+
+
   scrollHandler(event: any) {
+    let currentScrollPos = event.currentTarget.scrollTop;
 
-    let currentScrollTop = event.currentTarget.scrollTop;
-
-    if (currentScrollTop > this.lastScrollTop) {
+    if (currentScrollPos > this.lastScrollPos) {
       this.handleScrollDown();
       this.handleMobileScrollDown();
     } else {
       this.handleScrollUp();
       this.handleMobileScrollUp();
     }
-    this.lastScrollTop = currentScrollTop;
+    this.lastScrollPos = currentScrollPos;
   }
+
 
   handleScrollDown() {
     if (this.mobileStyle)
       return;
 
-    console.log(this.lastScrollTop);
-
-    if (this.lastScrollTop > 800)
+    if (this.lastScrollPos > 800)
       this.skillsComponent.arrowAnimation = true;
 
-    if (this.lastScrollTop > 1900)
+    if (this.lastScrollPos > 1900)
       this.portfolioComponent.arrowAnimation = true;
 
-    if (this.lastScrollTop > 3533)
+    if (this.lastScrollPos > 3533)
       this.contactComponent.arrowAnimation = true;
   }
+
 
   handleScrollUp() {
     if (this.mobileStyle)
       return;
-    console.log(this.lastScrollTop);
-    if (this.lastScrollTop < 580)
+
+    if (this.lastScrollPos < 580)
       this.skillsComponent.arrowAnimation = false;
 
-    if (this.lastScrollTop < 1500)
+    if (this.lastScrollPos < 1500)
       this.portfolioComponent.arrowAnimation = false;
 
-    if (this.lastScrollTop < 3000)
+    if (this.lastScrollPos < 3000)
       this.contactComponent.arrowAnimation = false;
   }
+
 
   handleMobileScrollDown() {
     if (!this.mobileStyle)
       return;
 
-    if (this.lastScrollTop > 1000)
+    if (this.lastScrollPos > 1440)
       this.skillsComponent.arrowAnimation = true;
 
-    if (this.lastScrollTop > 1900)
+    if (this.lastScrollPos > 2330)
       this.portfolioComponent.arrowAnimation = true;
 
-    if (this.lastScrollTop > 4100)
+    if (this.lastScrollPos > 7300)
       this.contactComponent.arrowAnimation = true;
   }
+
 
   handleMobileScrollUp() {
     if (!this.mobileStyle)
       return;
-    console.log(this.lastScrollTop);
 
-    if (this.lastScrollTop < 650)
+    if (this.lastScrollPos < 1090)
       this.skillsComponent.arrowAnimation = false;
 
-    if (this.lastScrollTop < 1500)
+    if (this.lastScrollPos < 2050)
       this.portfolioComponent.arrowAnimation = false;
 
-    if (this.lastScrollTop < 3700)
+    if (this.lastScrollPos < 6900)
       this.contactComponent.arrowAnimation = false;
-  }
-
-  onMouseMove(event: MouseEvent) {
-    this.cyrclePosX = event.pageX;
-    this.cyrclePosY = event.pageY;
   }
 }

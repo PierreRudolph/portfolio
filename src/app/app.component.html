@@ -1,4 +1,4 @@
-<div (mousemove)="onMouseMove($event)" class="main-div" #mainDiv (scroll)="scrollHandler($event)">
+<div #scrollArea (mousemove)="onMouseMove($event)" class="main-div" #mainDiv (scroll)="scrollHandler($event)">
     <div [style.left]="(cyrclePosX-820)+'px'" [style.top]="(cyrclePosY-250)+'px'" class="mouse-cyrcle"></div>
 
     <app-header class="header"></app-header>

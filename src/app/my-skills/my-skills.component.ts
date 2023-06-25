@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-my-skills',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class MySkillsComponent {
   public arrowAnimation: boolean = false;
+
+
+
 }

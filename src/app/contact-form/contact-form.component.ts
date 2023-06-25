@@ -35,7 +35,7 @@ export class ContactFormComponent {
     fd.append('name', this.name);
     fd.append('message', this.message + ' Nachricht versenden von: ' + this.email);
 
-    await fetch('https://pierre-lettner.developerakademie.net/Projekte/Portfolio/send_mail.php',
+    await fetch('https://pierre-lettner.de/Portfolio/send_mail.php',
       {
         method: 'POST',
         body: fd

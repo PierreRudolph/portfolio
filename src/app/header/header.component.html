@@ -1,5 +1,5 @@
 <header>
-    <img src="assets/layout/logo.svg">
+    <img src="assets/layout/logo.png">
     <div (click)="toggleMenu();preventCloseOnClick()" class="burger-menu-button">
         <span [ngClass]="menuActive ? 'burger-up':'burger-up-reverse'"></span>
         <span [ngClass]="menuActive ? 'burger-middle':'burger-middle-reverse'"></span>
@@ -7,7 +7,7 @@
     </div>
 </header>
 
-<div class="menu-div" [class.menu-active]="menuActive" >
+<div class="menu-div" [class.menu-active]="menuActive">
     <div class="menu-links-outer-div">
         <div class="menu-links" [class.menu-links-animation]="menuActive">
             <div class="menu-link">

@@ -8,6 +8,12 @@
     }
 }
 
+.own-logo {
+    width: unset !important;
+    height: 33px;
+    filter: invert(1);
+}
+
 .logo-social-logos-mobile {
     @media (max-width:500px) {
         flex-direction: column-reverse;

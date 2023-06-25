@@ -16,7 +16,7 @@ export class PortfolioComponent {
   }
 
   projects = [{
-    img: 'join1.png',
+    img: 'join.png',
     title: 'Join',
     technologies: 'Angular | TypeScript | HTML | CSS | Firebase',
     info: 'Task manager inspired by the Kanban System. Create an organize tasks using drag and drop functions, assign users and categories.',

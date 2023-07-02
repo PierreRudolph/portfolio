@@ -1,10 +1,18 @@
 @import url("./assets/fonts/fonts.css");
 
+:root {
+    --doc-height: 100%;
+}
+
+html,
 body {
+    height: 100vh;
+    height: var(--doc-height);
     background-color: black;
     font-family: 'Overpass', 'Arial', 'Verdana', sans-serif;
     font-size: 16px;
     margin: 0px;
+    padding: 0px;
 }
 
 .main-outer-div {

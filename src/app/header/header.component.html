@@ -1,6 +1,7 @@
 <header>
     <img src="assets/layout/logo.png">
-    <div (click)="toggleMenu();preventCloseOnClick()" class="burger-menu-button">
+    <div (touch)="toggleMenu();preventCloseOnClick()" (click)="toggleMenu();preventCloseOnClick()"
+        class="burger-menu-button">
         <span [ngClass]="menuActive ? 'burger-up':'burger-up-reverse'"></span>
         <span [ngClass]="menuActive ? 'burger-middle':'burger-middle-reverse'"></span>
         <span [ngClass]="menuActive ? 'burger-down':'burger-down-reverse'"></span>

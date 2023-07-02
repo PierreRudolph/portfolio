@@ -1,5 +1,6 @@
 <div #scrollArea (mousemove)="onMouseMove($event)" class="main-div" #mainDiv (scroll)="scrollHandler($event)">
-    <div [style.left]="(cyrclePosX-820)+'px'" [style.top]="(cyrclePosY-250)+'px'" class="mouse-cyrcle"></div>
+
+
 
     <app-header class="header"></app-header>
     <app-above-fold id="above-fold" class="above-fold"></app-above-fold>
@@ -8,4 +9,12 @@
     <app-portfolio class="portfolio"></app-portfolio>
     <app-contact-form class="contact-form"></app-contact-form>
     <app-footer class="footer"></app-footer>
+</div>
+
+<div [style.left]="(cyrclePosX - 175)+'px'" [style.top]="(cyrclePosY - 175)+'px'"
+    [style.background]="'linear-gradient(' + (linearGradientDeg * 100) + 'deg, rgb(255, 252, 243, 0.0) 79%, black 71%)'"
+    class="mouse-cyrcle">
+    <div class="mouse-img-div" [style.rotate.deg]="(linearGradientDeg * 100)">
+        <img src="assets/layout/logo.png">
+    </div>
 </div>

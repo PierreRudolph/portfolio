@@ -19,7 +19,6 @@ export class AppComponent {
   mainPagePadding: number = 100;
 
   linearGradientDeg: number = 187;
-  linearGradientPerc: number = 79;
 
   @ViewChild(MySkillsComponent)
   skillsComponent!: MySkillsComponent;
@@ -56,7 +55,6 @@ export class AppComponent {
     this.cyrclePosX = event.pageX;
     this.cyrclePosY = event.pageY;
     this.linearGradientDeg = event.pageX / 360;
-    this.linearGradientPerc = window.innerHeight / event.pageY;
   }
 
 

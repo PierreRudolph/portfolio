@@ -28,41 +28,22 @@
         padding-right: 25px;
     }
 
-    &:hover {
-        .mouse-cyrcle {
-            animation: wobble 1s infinite;
-        }
 
-    }
-}
-
-@keyframes wobble {
-    0% {
-        transform: translateX(0) translateY(0);
-    }
-
-    50% {
-        transform: translateX(-5px) translateY(-5px);
-    }
-
-    100% {
-        transform: translateX(0) translateY(0);
-    }
 }
 
 .mouse-cyrcle {
     pointer-events: none;
     z-index: 2;
     border: 4px solid black;
-    height: 350px;
-    width: 350px;
+    height: 250px;
+    width: 250px;
     transition: all 80ms linear;
     background: 187deg, rgb(255, 252, 243, 0.0) 79%, black 71%;
     box-shadow: 0px 0px 6px 2px inset white;
     border-radius: 50%;
     position: absolute;
-    left: -100px;
-    top: -100px;
+    left: -50px;
+    top: -50px;
 }
 
 .mouse-img-div {
@@ -77,23 +58,22 @@
         height: 33px;
         position: absolute;
         top: 15px;
-        left: 150px;
+        left: 100px;
         filter: invert(1);
     }
 }
 
 .header {
-    width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
-    position: sticky;
+    width: 1440px;
+    position: fixed;
     top: 0px;
+    left: auto;
+    right: auto;
     background-color: #FFFCF3;
     z-index: 2;
 
     @media (max-width:1640px) {
         width: calc(100vw - 200px);
-
     }
 
     @media (max-width:1440px) {

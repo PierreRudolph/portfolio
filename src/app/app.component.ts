@@ -16,7 +16,6 @@ export class AppComponent {
   lastScrollPos: number = 0;
   cyrclePosX: number = 0;
   cyrclePosY: number = 0;
-  mainPagePadding: number = 100;
 
   linearGradientDeg: number = 187;
 
@@ -41,13 +40,6 @@ export class AppComponent {
 
   checkScreenSize() {
     this.mobileStyle = window.innerHeight < 920;
-
-    if (window.innerWidth < 1440)
-      this.mainPagePadding = 50;
-
-    if (window.innerWidth < 700)
-      this.mainPagePadding = 25;
-
   }
 
 

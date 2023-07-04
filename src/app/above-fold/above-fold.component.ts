@@ -7,9 +7,12 @@ import { Component, HostListener } from '@angular/core';
 })
 export class AboveFoldComponent {
   mobileStyle = false;
+  h1 = event?.target as HTMLElement;
+  letters = 'ABCDFGHJKLMNOPQRSTUVWXYZ';
+  letter: any;
 
   constructor() {
-    this.checkScreenSize()
+    this.checkScreenSize();
   }
 
   @HostListener('window:resize')

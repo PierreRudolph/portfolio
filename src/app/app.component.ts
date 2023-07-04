@@ -16,7 +16,6 @@ export class AppComponent {
   lastScrollPos: number = 0;
   cyrclePosX: number = 0;
   cyrclePosY: number = 0;
-
   linearGradientDeg: number = 187;
 
   @ViewChild(MySkillsComponent)

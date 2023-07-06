@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
 
 
 @Component({
@@ -17,6 +17,7 @@ export class AppComponent {
   windowWidth: number = window.innerWidth
   mouseMove: number = 0;
   interval: any;
+
   constructor() {
     this.checkScreenSize();
   }

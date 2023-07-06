@@ -144,6 +144,7 @@
     flex-wrap: wrap;
 
     div {
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -151,12 +152,12 @@
         margin: 40px;
         margin-right: 80px;
         margin-left: 80px;
-        cursor: pointer;
+        overflow: hidden;
 
         &:hover {
             img {
                 animation-name: icon-animation;
-                animation-duration: 225ms;
+                animation-duration: 333ms;
             }
 
             span {
@@ -214,15 +215,15 @@
     }
 
     25% {
-        transform: translateX(30px) scale(0.7);
+        transform: translateX(45px) scale(0.6);
     }
 
     50% {
-        transform: translateX(0px) scale(0.5);
+        transform: translateX(0px) scale(0.3);
     }
 
     75% {
-        transform: translateX(-30px) scale(0.7);
+        transform: translateX(-45px) scale(0.6);
     }
 
     100% {

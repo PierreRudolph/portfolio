@@ -89,6 +89,9 @@ h1 {
     justify-content: space-between;
     margin-top: 150px;
 
+    @media (max-height:1080px) {
+        margin-top: auto;
+    }
 }
 
 .email-adress {

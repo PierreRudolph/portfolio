@@ -7,6 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class ProjectPreviewComponent {
 
+
+
   @Input() project = {
     img: '',
     title: '',
@@ -14,6 +16,7 @@ export class ProjectPreviewComponent {
     info: '',
     link: '',
   };
+
 
   @Input() projectId = 0;
 

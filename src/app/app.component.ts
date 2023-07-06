@@ -1,4 +1,4 @@
-import { Component, HostListener, ViewChild } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 
 @Component({
@@ -11,20 +11,37 @@ export class AppComponent {
   title = 'Portfolio';
   menuActiveParent: boolean = false;
   lastScrollPos: number = 0;
-  cyrclePosX: number = 0;
-  cyrclePosY: number = 0;
-  linearGradientDeg: number = 187;
-  windowWidth: number = window.innerWidth
+
+  mouseCyrclePosX: number = 0;
+  mouseCyrclePosY: number = 0;
+  mouseCyrcleDeg: number = 187;
+  mouseCyrcleTimeout: any;
   mouseMove: number = 0;
-  interval: any;
+
+  windowWidth: number = window.innerWidth
+  touchDevice: boolean = false;
 
   constructor() {
     this.checkScreenSize();
+    this.checkIfTouchDevice();
   }
+
 
   @HostListener('window:resize')
   onWindowResize() {
     this.checkScreenSize();
+    this.checkIfTouchDevice();
+  }
+
+
+  checkIfTouchDevice() {
+    if (this.isTouchDevice())
+      this.touchDevice = true;
+  }
+
+
+  isTouchDevice = () => {
+    return window.matchMedia("(pointer: coarse)").matches
   }
 
 
@@ -36,12 +53,12 @@ export class AppComponent {
   onMouseMove(event: MouseEvent) {
     this.mouseMove = 1;
 
-    clearInterval(this.interval);
-    this.cyrclePosX = event.pageX;
-    this.cyrclePosY = event.pageY;
-    this.linearGradientDeg = event.pageX / 360;
+    clearTimeout(this.mouseCyrcleTimeout);
+    this.mouseCyrclePosX = event.pageX;
+    this.mouseCyrclePosY = event.pageY;
+    this.mouseCyrcleDeg = event.pageX / 360;
 
-    this.interval = setTimeout(() => {
+    this.mouseCyrcleTimeout = setTimeout(() => {
       this.mouseMove = 0;
     }, 700)
   }

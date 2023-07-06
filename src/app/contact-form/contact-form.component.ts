@@ -14,6 +14,7 @@ export class ContactFormComponent {
   sendingMessage = false;
   successfullySubmitted = false;
 
+
   async onSubmit() {
     this.sendingMessage = true;
 

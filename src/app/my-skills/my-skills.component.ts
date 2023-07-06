@@ -1,7 +1,5 @@
 import { Component, } from '@angular/core';
 
-
-
 @Component({
   selector: 'app-my-skills',
   templateUrl: './my-skills.component.html',
@@ -9,7 +7,4 @@ import { Component, } from '@angular/core';
 })
 export class MySkillsComponent {
   public arrowAnimation: boolean = false;
-
-
-
 }

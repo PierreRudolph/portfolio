@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class PortfolioComponent {
   arrowAnimation: boolean = false;
+
+
   project = {
     img: '',
     title: '',
@@ -14,6 +16,7 @@ export class PortfolioComponent {
     info: '',
     link: '',
   }
+
 
   projects = [{
     img: 'join.png',

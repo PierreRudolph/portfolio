@@ -9,14 +9,17 @@ export class FooterComponent {
   mobileStyle = false;
   headerMenuActive = false;
 
+
   constructor() {
     this.checkScreenSize();
   }
+
 
   @HostListener('window:resize')
   onWindowResize() {
     this.checkScreenSize();
   }
+
 
   checkScreenSize() {
     this.mobileStyle = window.innerWidth < 500;

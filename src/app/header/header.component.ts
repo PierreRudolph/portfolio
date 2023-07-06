@@ -10,8 +10,10 @@ export class HeaderComponent {
   menuBtnClick: boolean = false;
   menuActive: boolean = false;
 
+
   @ViewChild(FooterComponent)
   footerComponent!: FooterComponent;
+
 
   constructor(private renderer: Renderer2) {
 
@@ -24,14 +26,17 @@ export class HeaderComponent {
     });
   }
 
+
   toggleMenu() {
     this.menuActive = !this.menuActive;
     this.emitToggleToFooter();
   }
 
+
   emitToggleToFooter() {
     this.footerComponent.headerMenuActive = this.menuActive;
   }
+
 
   preventCloseOnClick() {
     this.menuBtnClick = true;

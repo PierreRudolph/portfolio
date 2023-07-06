@@ -8,14 +8,18 @@ import { Component, HostListener } from '@angular/core';
 export class AboutMeComponent {
   mobileStyle = false;
 
+
   constructor() {
     this.checkScreenSize()
   }
+
 
   @HostListener('window:resize')
   onWindowResize() {
     this.checkScreenSize();
   }
+
+
   checkScreenSize() {
     this.mobileStyle = window.innerWidth > 580;
   }

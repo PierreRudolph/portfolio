@@ -1,7 +1,4 @@
 <div (mousemove)="onMouseMove($event)" class="main-div" #mainDiv>
-
-
-
     <app-header class="header"></app-header>
     <app-above-fold id="above-fold" class="above-fold"></app-above-fold>
     <app-about-me id="about-me" class="about-me"></app-about-me>
@@ -11,12 +8,12 @@
     <app-footer class="footer"></app-footer>
 </div>
 
-<div *ngIf="cyrclePosX >= 10 && cyrclePosX <= (windowWidth - 10)" [style.opacity]="mouseMove"
-    [style.left]="(cyrclePosX - 120)+'px'" [style.top]="(cyrclePosY - 120)+'px'"
-    [style.background]="'linear-gradient(' + (linearGradientDeg * 100) + 'deg, rgb(255, 252, 243, 0.0) 79%, black 71%)'"
+<div *ngIf="mouseCyrclePosX >= 10 && mouseCyrclePosX <= (windowWidth - 10) && !touchDevice" [style.opacity]="mouseMove"
+    [style.left]="(mouseCyrclePosX - 120)+'px'" [style.top]="(mouseCyrclePosY - 120)+'px'"
+    [style.background]="'linear-gradient(' + (mouseCyrcleDeg * 100) + 'deg, rgb(255, 252, 243, 0.0) 79%, black 71%)'"
     class="mouse-cyrcle">
 
-    <div class="mouse-img-div" [style.rotate.deg]="(linearGradientDeg * 100)">
+    <div class="mouse-img-div" [style.rotate.deg]="(mouseCyrcleDeg * 100)">
         <img src="assets/layout/logo.png">
     </div>
 

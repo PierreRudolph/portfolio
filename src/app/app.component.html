@@ -1,4 +1,4 @@
-<div #scrollArea (mousemove)="onMouseMove($event)" class="main-div" #mainDiv>
+<div (mousemove)="onMouseMove($event)" class="main-div" #mainDiv>
 
 
 
@@ -11,8 +11,8 @@
     <app-footer class="footer"></app-footer>
 </div>
 
-<div *ngIf="cyrclePosX > 10 && cyrclePosX <= (windowWidth - 10)" [style.left]="(cyrclePosX - 120)+'px'"
-    [style.top]="(cyrclePosY - 120)+'px'"
+<div *ngIf="cyrclePosX >= 10 && cyrclePosX <= (windowWidth - 10)" [style.opacity]="mouseMove"
+    [style.left]="(cyrclePosX - 120)+'px'" [style.top]="(cyrclePosY - 120)+'px'"
     [style.background]="'linear-gradient(' + (linearGradientDeg * 100) + 'deg, rgb(255, 252, 243, 0.0) 79%, black 71%)'"
     class="mouse-cyrcle">
 

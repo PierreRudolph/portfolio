@@ -15,7 +15,8 @@ export class AppComponent {
   cyrclePosY: number = 0;
   linearGradientDeg: number = 187;
   windowWidth: number = window.innerWidth
-
+  mouseMove: number = 0;
+  interval: any;
   constructor() {
     this.checkScreenSize();
   }
@@ -32,8 +33,15 @@ export class AppComponent {
 
 
   onMouseMove(event: MouseEvent) {
+    this.mouseMove = 1;
+
+    clearInterval(this.interval);
     this.cyrclePosX = event.pageX;
     this.cyrclePosY = event.pageY;
     this.linearGradientDeg = event.pageX / 360;
+
+    this.interval = setTimeout(() => {
+      this.mouseMove = 0;
+    }, 700)
   }
 }

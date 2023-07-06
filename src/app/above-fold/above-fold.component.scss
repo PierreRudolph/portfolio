@@ -6,6 +6,7 @@ h1 {
     letter-spacing: -0.025em;
     text-align: center;
     margin-bottom: 0px;
+    margin-top: 200px;
 
     @media (max-width:1350px) {
         font-size: 102px;
@@ -13,7 +14,7 @@ h1 {
 
     @media (max-width:880px) {
         font-size: 77px;
-        margin-top: 150px;
+        margin-top: 100px;
     }
 
     @media (max-width:700px) {
@@ -83,13 +84,28 @@ h1 {
     }
 }
 
+.above-field-button {
+    margin-top: 125px;
+    margin-bottom: 60px;
+    text-decoration: none;
+    color: black;
+
+    @media (max-height:720px) {
+        margin-top: 100px;
+    }
+
+    @media (max-height:670px) {
+        margin-top: 50px;
+    }
+}
+
 .bottom-div {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 150px;
 
-    @media (max-height:1080px) {
+    @media (max-height:1280px) {
         margin-top: auto;
     }
 }
@@ -155,11 +171,4 @@ h1 {
     100% {
         transform: translateY(50px);
     }
-}
-
-.above-field-button {
-    margin-top: 125px;
-    margin-bottom: 60px;
-    text-decoration: none;
-    color: black;
 }

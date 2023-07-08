@@ -101,7 +101,6 @@ header {
     align-items: center;
     width: 610px;
 
-
     @media (max-width:700px) {
         width: 460px;
     }
@@ -117,16 +116,14 @@ header {
 
 .menu-links-animation {
     animation: moving-up 225ms ease-in-out 125ms forwards;
+}
 
-    @media (max-width:1350px) {
-        animation: moving-up-mobile-1350 225ms ease-in-out 125ms forwards;
-    }
+.menu-links-animation-small {
+    animation: moving-up-mobile-small 225ms ease-in-out 125ms forwards;
+}
 
-    @media (max-width:800px) {
-        animation: moving-up-mobile-800 225ms ease-in-out 125ms forwards;
-    }
-
-
+.menu-links-animation-smaller {
+    animation: moving-up-mobile-smaller 225ms ease-in-out 125ms forwards;
 }
 
 @keyframes moving-up {
@@ -140,23 +137,23 @@ header {
 }
 
 
-@keyframes moving-up-mobile-1350 {
+@keyframes moving-up-mobile-small {
     0% {
         bottom: 0px;
     }
 
     100% {
-        bottom: 285px;
+        bottom: 500px;
     }
 }
 
-@keyframes moving-up-mobile-800 {
+@keyframes moving-up-mobile-smaller {
     0% {
         bottom: 0px;
     }
 
     100% {
-        bottom: 220px;
+        bottom: 280px;
     }
 }
 

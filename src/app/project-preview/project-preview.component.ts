@@ -14,7 +14,8 @@ export class ProjectPreviewComponent {
     title: '',
     technologies: '',
     info: '',
-    link: '',
+    projectLink: '',
+    gitHubLink: ''
   };
 
 

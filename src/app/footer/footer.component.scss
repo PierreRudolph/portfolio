@@ -52,13 +52,6 @@
     text-align: center;
     width: 130px;
 
-    &:hover {
-        div {
-            transform: translateX(55px) scale(1);
-            opacity: 1;
-        }
-    }
-
     a {
         color: white;
         text-decoration: none;
@@ -72,9 +65,16 @@
         transition: all 125ms ease-in-out;
         width: 55.5px;
         border: 2px solid #FF9900;
-        transform: scale(0.5) translateX(50px);
+        transform: translateX(50px) scale(0.5);
         opacity: 0;
         margin-top: 5px;
+    }
+
+    &:hover {
+        div {
+            transform: translateX(55px) scale(1);
+            opacity: 1;
+        }
     }
 }
 

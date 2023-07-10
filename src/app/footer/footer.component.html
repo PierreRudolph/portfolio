@@ -1,6 +1,6 @@
 <div [class.logo-social-logos-mobile]="!headerMenuActive" class="logo-social-logos">
 
-    <img class="own-logo" *ngIf="!headerMenuActive" src="assets/layout/logo.png">
+    <a class="logo" routerLink="/"><img *ngIf="!headerMenuActive" src="assets/layout/logo.png"></a>
 
     <div [class.social-btns-mobile]="!headerMenuActive" class="social-btns">
 
@@ -19,7 +19,7 @@
     <span *ngIf="mobileStyle || headerMenuActive">PLettner@Hotmail.de</span>
 
     <div *ngIf="!headerMenuActive" class="legal-notice">
-        <a>Legal Notice</a>
+        <a routerLink="/legal-notice">Legal Notice</a>
         <div></div>
     </div>
 </div>

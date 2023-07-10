@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -8,7 +8,8 @@ import { Component, HostListener } from '@angular/core';
 export class FooterComponent {
   mobileStyle = false;
   headerMenuActive = false;
-
+  legalNoticeShowing: boolean = false;
+  @Output() legalNoticeShowingToEmit = new EventEmitter<boolean>();
 
   constructor() {
     this.checkScreenSize();
@@ -23,5 +24,10 @@ export class FooterComponent {
 
   checkScreenSize() {
     this.mobileStyle = window.innerWidth < 500;
+  }
+
+  toggleLegalNotice() {
+    this.legalNoticeShowingToEmit.emit(this.legalNoticeShowing);
+    this.legalNoticeShowing = !this.legalNoticeShowing;
   }
 }

@@ -8,10 +8,15 @@
     }
 }
 
-.own-logo {
-    width: unset !important;
-    height: 33px;
-    filter: invert(1);
+.logo {
+    cursor: pointer;
+
+    img {
+        width: unset !important;
+        height: 33px;
+        filter: invert(1);
+    }
+
 }
 
 .logo-social-logos-mobile {
@@ -56,6 +61,7 @@
 
     a {
         color: white;
+        text-decoration: none;
 
         &:hover {
             font-weight: 700;

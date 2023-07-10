@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,8 +10,6 @@ import { Component, HostListener } from '@angular/core';
 
 export class AppComponent {
   title = 'Portfolio';
-  menuActiveParent: boolean = false;
-  lastScrollPos: number = 0;
 
   mouseCyrclePosX: number = 0;
   mouseCyrclePosY: number = 0;
@@ -21,11 +20,12 @@ export class AppComponent {
   windowWidth: number = window.innerWidth
   touchDevice: boolean = false;
 
-  constructor() {
+  legalNoticeShowing: boolean = false;
+
+  constructor(public router: Router) {
     this.checkScreenSize();
     this.checkIfTouchDevice();
   }
-
 
   @HostListener('window:resize')
   onWindowResize() {

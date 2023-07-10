@@ -12,6 +12,8 @@ import { ProjectPreviewComponent } from './project-preview/project-preview.compo
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { FormsModule } from '@angular/forms';
     PortfolioComponent,
     ProjectPreviewComponent,
     ContactFormComponent,
-    FooterComponent
+    FooterComponent,
+    LegalNoticeComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,

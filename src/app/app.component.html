@@ -1,10 +1,9 @@
 <div (mousemove)="onMouseMove($event)" class="main-div" #mainDiv>
+
     <app-header class="header"></app-header>
-    <app-above-fold id="above-fold" class="above-fold"></app-above-fold>
-    <app-about-me id="about-me" class="about-me"></app-about-me>
-    <app-my-skills class="my-skills"></app-my-skills>
-    <app-portfolio class="portfolio"></app-portfolio>
-    <app-contact-form class="contact-form"></app-contact-form>
+
+    <router-outlet></router-outlet>
+
     <app-footer class="footer"></app-footer>
 </div>
 

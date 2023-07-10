@@ -1,5 +1,5 @@
 <header>
-    <img src="assets/layout/logo.png">
+    <a class="logo" routerLink="/"><img src="assets/layout/logo.png"></a>
     <div (touch)="toggleMenu();preventCloseOnClick()" (click)="toggleMenu();preventCloseOnClick()"
         class="burger-menu-button">
         <span [ngClass]="menuActive ? 'burger-up':'burger-up-reverse'"></span>

@@ -62,14 +62,13 @@
 
                 top: unset;
                 left: 0px;
-                bottom: -387px;
+                bottom: -395px;
             }
 
             .project-info-right {
                 top: unset;
                 right: 0px;
                 left: unset;
-                bottom: -387px;
             }
         }
     }
@@ -77,7 +76,7 @@
     @media (max-width:480px) {
         margin-right: 40px;
         margin-left: unset;
-        width: unset;
+
 
         &:hover {
             .project-info-left {
@@ -92,11 +91,11 @@
     justify-content: flex-end;
 
     @media (max-width:1250px) {
-        justify-content: unset;
+        justify-content: flex-end;
     }
 
     @media (max-width:480px) {
-        margin-left: 40px;
+
         margin-right: unset;
     }
 }

@@ -10,5 +10,4 @@
 </div>
 
 <app-project-preview *ngFor="let project of projects; index as i" [class.right]="i % 2" [project]="project"
-    [projectId]="i" class="preview-left" ontouchstart="projectPreview.hover=true"
-    ontouchleave="projectPreview.hover=false" #projectPreview></app-project-preview>
+    [projectId]="i" class="preview-left"></app-project-preview>

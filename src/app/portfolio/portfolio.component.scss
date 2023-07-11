@@ -105,6 +105,8 @@
     flex-direction: row;
     width: 100%;
     margin-top: 130px;
+    transition-delay: 150ms;
+    transition-duration: 225ms;
 
 
     @media (max-width:1350px) {
@@ -116,6 +118,7 @@
         flex-direction: column-reverse;
         width: unset;
         margin-top: 70px;
+        height: 220px;
 
         &:hover {
             height: 800px;

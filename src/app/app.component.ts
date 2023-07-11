@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 
@@ -25,7 +25,10 @@ export class AppComponent {
   constructor(public router: Router) {
     this.checkScreenSize();
     this.checkIfTouchDevice();
+
   }
+
+
 
   @HostListener('window:resize')
   onWindowResize() {
@@ -57,7 +60,6 @@ export class AppComponent {
     this.mouseCyrclePosX = event.pageX;
     this.mouseCyrclePosY = event.pageY;
     this.mouseCyrcleDeg = event.pageX / 360;
-
     this.mouseCyrcleTimeout = setTimeout(() => {
       this.mouseMove = 0;
     }, 700)

@@ -1,9 +1,6 @@
 <div (mousemove)="onMouseMove($event)" class="main-div" #mainDiv>
-
     <app-header class="header"></app-header>
-
     <router-outlet></router-outlet>
-
     <app-footer class="footer"></app-footer>
 </div>
 
@@ -11,9 +8,7 @@
     [style.left]="(mouseCyrclePosX - 120)+'px'" [style.top]="(mouseCyrclePosY - 120)+'px'"
     [style.background]="'linear-gradient(' + (mouseCyrcleDeg * 100) + 'deg, rgb(255, 252, 243, 0.0) 79%, black 71%)'"
     class="mouse-cyrcle">
-
     <div class="mouse-img-div" [style.rotate.deg]="(mouseCyrcleDeg * 100)">
         <img src="assets/layout/logo.png">
     </div>
-
 </div>

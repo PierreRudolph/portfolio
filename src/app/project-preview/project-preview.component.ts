@@ -7,8 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class ProjectPreviewComponent {
 
-
-
   @Input() project = {
     img: '',
     title: '',
@@ -18,7 +16,5 @@ export class ProjectPreviewComponent {
     gitHubLink: ''
   };
 
-
   @Input() projectId = 0;
-
 }

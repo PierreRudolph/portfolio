@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
 
 @Component({
@@ -10,23 +10,25 @@ export class HeaderComponent {
   menuBtnClick: boolean = false;
   menuActive: boolean = false;
 
-
   @ViewChild(FooterComponent)
   footerComponent!: FooterComponent;
 
   @ViewChild('menuLinks')
   menuLinks!: ElementRef<HTMLDivElement>;
 
-
   constructor(private renderer: Renderer2) {
+    this.checkClickOutsideMenuBtn();
 
+  }
+
+
+  checkClickOutsideMenuBtn() {
     this.renderer.listen('window', 'click', (e: Event) => {
       if (!this.menuBtnClick) {
         this.menuActive = false;
         this.emitToggleToFooter();
       }
       this.menuBtnClick = false;
-
     });
   }
 
@@ -41,7 +43,6 @@ export class HeaderComponent {
   setMenuLinksClass() {
     if (window.innerWidth > 1350)
       this.menuLinks.nativeElement.className = 'menu-links-animation menu-links';
-
 
     if (window.innerWidth <= 1350)
       this.menuLinks.nativeElement.className = 'menu-links-animation-small menu-links';

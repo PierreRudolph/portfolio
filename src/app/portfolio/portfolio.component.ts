@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 export class PortfolioComponent {
   arrowAnimation: boolean = false;
 
-
   project = {
     img: '',
     title: '',
@@ -17,7 +16,6 @@ export class PortfolioComponent {
     projectLink: '',
     gitHubLink: ''
   }
-
 
   projects = [{
     img: 'join.png',

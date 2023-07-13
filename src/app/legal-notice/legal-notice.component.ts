@@ -8,10 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LegalNoticeComponent implements OnInit {
 
-  constructor(public scroll: ViewportScroller) {
-
-  }
-
+  constructor(public scroll: ViewportScroller) { }
 
   ngOnInit(): void {
     this.scroll.scrollToAnchor("top");

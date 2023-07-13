@@ -10,16 +10,31 @@ export class ContactFormComponent {
   name: any;
   email!: any;
   message!: any;
-
   sendingMessage = false;
   successfullySubmitted = false;
 
-
   async onSubmit() {
     this.sendingMessage = true;
-
     await this.sendMail();
+    this.showResponse();
+  }
 
+
+  async sendMail() {
+    let fd = new FormData();
+    fd.append('name', this.name);
+    fd.append('message', this.message + ' Nachricht versendet von: ' + this.email);
+
+    await fetch('https://pierre-lettner.de/send_mail.php',
+      {
+        method: 'POST',
+        body: fd
+      }
+    );
+  }
+
+
+  showResponse() {
     setTimeout(() => {
       this.sendingMessage = false;
       this.successfullySubmitted = true;
@@ -28,19 +43,5 @@ export class ContactFormComponent {
     setTimeout(() => {
       this.successfullySubmitted = false;
     }, 2500);
-  }
-
-
-  async sendMail() {
-    let fd = new FormData();
-    fd.append('name', this.name);
-    fd.append('message', this.message + ' Nachricht versenden von: ' + this.email);
-
-    await fetch('https://pierre-lettner.de/Portfolio/send_mail.php',
-      {
-        method: 'POST',
-        body: fd
-      }
-    );
   }
 }

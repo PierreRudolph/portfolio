@@ -1,4 +1,4 @@
-import { Component, HostListener, ViewChild } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 
@@ -25,21 +25,13 @@ export class AppComponent {
   constructor(public router: Router) {
     this.checkScreenSize();
     this.checkIfTouchDevice();
-
   }
-
 
 
   @HostListener('window:resize')
   onWindowResize() {
     this.checkScreenSize();
     this.checkIfTouchDevice();
-  }
-
-
-  checkIfTouchDevice() {
-    if (this.isTouchDevice())
-      this.touchDevice = true;
   }
 
 
@@ -53,13 +45,28 @@ export class AppComponent {
   }
 
 
+  checkIfTouchDevice() {
+    if (this.isTouchDevice())
+      this.touchDevice = true;
+  }
+
+
   onMouseMove(event: MouseEvent) {
     this.mouseMove = 1;
-
     clearTimeout(this.mouseCyrcleTimeout);
+    this.setMousePosition(event);
+    this.mouseCyrcleDeg = event.pageX / 360;
+    this.hideMouseCyrcleAfterTimeout();
+  }
+
+
+  setMousePosition(event: MouseEvent) {
     this.mouseCyrclePosX = event.pageX;
     this.mouseCyrclePosY = event.pageY;
-    this.mouseCyrcleDeg = event.pageX / 360;
+  }
+
+
+  hideMouseCyrcleAfterTimeout() {
     this.mouseCyrcleTimeout = setTimeout(() => {
       this.mouseMove = 0;
     }, 700)

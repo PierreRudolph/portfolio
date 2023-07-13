@@ -29,9 +29,8 @@
 }
 
 .arrow-animation {
-    animation-name: arrow-move-left;
-    animation-duration: 500ms;
-    animation-fill-mode: forwards;
+
+    animation: arrow-move-left 500ms forwards;
 }
 
 @keyframes arrow-move-left {

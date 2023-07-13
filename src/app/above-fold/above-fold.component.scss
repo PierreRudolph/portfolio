@@ -142,14 +142,8 @@ h1 {
     object-fit: contain;
     position: absolute;
     transform: translateY(-220px);
-    animation-name: scroll-arrow-animation;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-fill-mode: backwards;
-    animation-duration: 2s;
+    animation: scroll-arrow-animation 2s linear infinite backwards;
 }
-
-
 
 @keyframes scroll-arrow-animation {
     0% {

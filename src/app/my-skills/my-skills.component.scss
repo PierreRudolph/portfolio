@@ -36,9 +36,7 @@
 }
 
 .arrow-animation {
-    animation-name: arrow-move-left;
-    animation-duration: 500ms;
-    animation-fill-mode: forwards;
+    animation: arrow-move-left 500ms ease 0s 1 normal forwards;
 }
 
 @keyframes arrow-move-left {
@@ -156,8 +154,7 @@
 
         &:hover {
             img {
-                animation-name: icon-animation;
-                animation-duration: 280ms;
+                animation: icon-animation 280ms;
             }
 
             span {

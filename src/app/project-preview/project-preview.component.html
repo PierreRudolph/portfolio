@@ -1,11 +1,8 @@
 <div class="project-container-left" [class.project-container-right]="projectId % 2" #projectContainer>
-
     <img class="project-img" src="assets/img/{{ project.img }}">
-
     <div class="border-div-left" [class.border-div-right]="projectId % 2">
         <img class="cyrcle-arrow-left" [class.cyrcle-arrow-right]="projectId % 2" src="assets/layout/cyrcle-arrow.svg">
     </div>
-
     <div class="project-info-left" [class.project-info-right]="projectId % 2">
         <h3>{{ project.title }}</h3>
         <span>{{ project.technologies }}</span>

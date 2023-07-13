@@ -245,24 +245,13 @@ header {
     }
 
     h2:hover span::before {
-        animation-duration: 225ms;
-        animation-delay: 125ms;
-        animation-fill-mode: forwards;
+        animation: border-sliding-before 225ms ease 125ms 1 normal forwards;
 
-        @media (min-width:701px) {
-            animation-name: border-sliding-before;
-        }
     }
 
     h2:hover span::after {
         opacity: 1;
-        animation-duration: 225ms;
-        animation-delay: 125ms;
-        animation-fill-mode: forwards;
-
-        @media (min-width:701px) {
-            animation-name: border-sliding-after;
-        }
+        animation: border-sliding-after 225ms ease 125ms 1 normal forwards;
     }
 }
 
@@ -411,34 +400,15 @@ header {
 }
 
 .burger-up {
-    animation-name: burger-up-animation;
-    animation-duration: 500ms;
-    animation-delay: 125ms;
-    animation-fill-mode: forwards;
-}
-
-.burger-down {
-    animation-name: burger-down-animation;
-    animation-duration: 500ms;
-    animation-delay: 125ms;
-    animation-fill-mode: forwards;
+    animation: burger-up-animation 500ms ease 125ms 1 normal forwards;
 }
 
 .burger-middle {
-    animation-name: burger-middle-animation;
-    animation-duration: 500ms;
-    animation-delay: 125ms;
-    animation-fill-mode: forwards;
+    animation: burger-middle-animation 500ms ease 125ms 1 normal forwards;
 }
 
-@keyframes burger-middle-animation {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(45deg);
-    }
+.burger-down {
+    animation: burger-down-animation 500ms ease 125ms 1 normal forwards;
 }
 
 @keyframes burger-up-animation {
@@ -468,6 +438,16 @@ header {
     100% {
         width: 20px;
         transform: translateX(3px) rotate(-44deg) translateY(8px);
+    }
+}
+
+@keyframes burger-middle-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
     }
 }
 

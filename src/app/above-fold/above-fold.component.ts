@@ -8,7 +8,6 @@ import { Component, HostListener } from '@angular/core';
 export class AboveFoldComponent {
   mobileStyle = false;
 
-
   constructor() {
     this.checkScreenSize();
   }

@@ -18,9 +18,16 @@ export class PortfolioComponent {
   }
 
   projects = [{
+    img: 'DABubble.png',
+    title: 'DABubble',
+    technologies: 'Angular | TypeScript | Firebase | SCSS',
+    info: 'DABubble is a communication platform designed to enhance team collaboration, it is inspired by Slack.',
+    projectLink: 'https://pierre-lettner.de/DABubble/index.html',
+    gitHubLink: 'https://github.com/PierreRudolph/DABubble'
+  }, {
     img: 'join.png',
     title: 'Join',
-    technologies: 'Angular | TypeScript | HTML | CSS | Firebase',
+    technologies: 'JavaScript | HTML | CSS',
     info: 'Task manager inspired by the Kanban System. Create an organize tasks using drag and drop functions, assign users and categories.',
     projectLink: 'https://pierre-lettner.de/Join/index.html',
     gitHubLink: 'https://github.com/PierreRudolph/Join'

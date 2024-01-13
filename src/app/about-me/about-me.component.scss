@@ -58,8 +58,9 @@
 }
 
 .about-me-img {
-    width: 533px;
-    margin-top: 195px;
+
+    margin-top: 87px;
+    margin-right: 100px;
     position: relative;
 
     &:hover {
@@ -70,25 +71,33 @@
     }
 
     @media (max-width:1350px) {
-        width: 421px;
-        margin-top: 150px;
-    }
-
-    @media (max-width:580px) {
-        width: 340px;
-    }
-
-    @media (max-width:400px) {
-        width: 290px;
-    }
-
-    @media (max-width:385px) {
-        width: 260px;
+        margin-right: 0px;
     }
 }
 
 .profil-img {
-    width: 100%;
+    width: 400px;
+    height: 600px;
+
+    @media (max-width:1350px) {
+        width: 350px;
+        height: 525px;
+    }
+
+    @media (max-width:580px) {
+        width: 300px;
+        height: 450px;
+    }
+
+    @media (max-width:400px) {
+        width: 250px;
+        height: 375px;
+    }
+
+    @media (max-width:385px) {
+        width: 220px;
+        height: 330px;
+    }
 
     img {
         object-fit: contain;
@@ -103,15 +112,15 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 528px;
-    height: 528px;
+    width: 400px;
+    height: 600px;
     pointer-events: none;
     box-shadow: 0px 0px 6px 2px inset white;
     box-sizing: border-box;
 
     @media (max-width:1350px) {
-        width: 421px;
-        height: 421px;
+        width: 350px;
+        height: 525px;
     }
 
     @media (max-width:880px) {
@@ -119,18 +128,18 @@
     }
 
     @media (max-width:580px) {
-        width: 340px;
-        height: 340px;
+        width: 300px;
+        height: 450px;
     }
 
     @media (max-width:400px) {
-        width: 290px;
-        height: 290px;
+        width: 250px;
+        height: 375px;
     }
 
     @media (max-width:385px) {
-        width: 260px;
-        height: 260px;
+        width: 220px;
+        height: 330px;
     }
 }
 

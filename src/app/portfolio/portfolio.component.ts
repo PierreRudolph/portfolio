@@ -32,13 +32,6 @@ export class PortfolioComponent {
     projectLink: 'https://pierre-lettner.de/Join/index.html',
     gitHubLink: 'https://github.com/PierreRudolph/Join'
   }, {
-    img: 'pokedex.png',
-    title: 'Pokedex',
-    technologies: 'JavaScript | HTML | CSS | Api',
-    info: 'Based on the PokéAPI a simple library that provides and catalouges pokemon information.',
-    projectLink: 'https://pierre-lettner.de/Pokedex/index.html',
-    gitHubLink: 'https://github.com/PierreRudolph/Pokedex'
-  }, {
     img: 'pollo-loco.png',
     title: 'El Pollo Loco',
     technologies: 'JavaScript | HTML | CSS | OOP',
@@ -47,7 +40,7 @@ export class PortfolioComponent {
     gitHubLink: 'https://github.com/PierreRudolph/Ell_Polo_loco'
   }, {
     img: 'tic-tac-toe.png',
-    title: 'Tic Tac Toe',
+    title: 'Algorithm based Ki',
     technologies: 'JavaScript | HTML | CSS',
     info: 'Classic Tic Tac Toe game, with self Concipated and Programmed Computer Enemy',
     projectLink: 'https://pierre-lettner.de/Tic-Tac-Toe/index.html',

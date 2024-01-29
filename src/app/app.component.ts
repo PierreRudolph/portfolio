@@ -52,17 +52,28 @@ export class AppComponent {
 
 
   onMouseMove(event: MouseEvent) {
+    //console.log(event.pageX, this.mouseCyrclePosX)
+
     this.mouseMove = 1;
     clearTimeout(this.mouseCyrcleTimeout);
     this.setMousePosition(event);
     this.mouseCyrcleDeg = event.pageX / 360;
     this.hideMouseCyrcleAfterTimeout();
+
+
   }
 
 
   setMousePosition(event: MouseEvent) {
-    this.mouseCyrclePosX = event.pageX;
-    this.mouseCyrclePosY = event.pageY;
+    if (event.pageX > this.mouseCyrclePosX + 10 || event.pageX < this.mouseCyrclePosX - 10) {
+      this.mouseCyrclePosX = event.pageX;
+    }
+
+    if (event.pageY > this.mouseCyrclePosY + 10 || event.pageY < this.mouseCyrclePosY - 10) {
+      this.mouseCyrclePosY = event.pageY;
+    }
+
+
   }
 
 

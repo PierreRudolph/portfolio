@@ -5,7 +5,7 @@
 </div>
 
 <div *ngIf="mouseCyrclePosX >= 10 && mouseCyrclePosX <= (windowWidth - 10) && !touchDevice" [style.opacity]="mouseMove"
-    [style.left]="(mouseCyrclePosX - 60)+'px'" [style.top]="(mouseCyrclePosY - 60)+'px'"
+    [style.left]="(mouseCyrclePosX -60)+'px'" [style.top]="(mouseCyrclePosY - 60)+'px'"
     [style.background]="'linear-gradient(' + (mouseCyrcleDeg * 100) + 'deg, rgb(255, 252, 243, 0.0) 79%, black 71%)'"
     class="mouse-cyrcle">
     <div class="mouse-img-div" [style.rotate.deg]="(mouseCyrcleDeg * 100)">

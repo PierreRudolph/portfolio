@@ -17,7 +17,8 @@ export class AppComponent {
   mouseCyrcleTimeout: any;
   mouseMove: number = 0;
 
-  windowWidth: number = window.innerWidth
+  windowWidth: number = window.innerWidth;
+  windowHeight: number = window.innerHeight;
   touchDevice: boolean = false;
 
   legalNoticeShowing: boolean = false;
@@ -52,15 +53,13 @@ export class AppComponent {
 
 
   onMouseMove(event: MouseEvent) {
-    //console.log(event.pageX, this.mouseCyrclePosX)
-
-    this.mouseMove = 1;
-    clearTimeout(this.mouseCyrcleTimeout);
-    this.setMousePosition(event);
-    this.mouseCyrcleDeg = event.pageX / 360;
-    this.hideMouseCyrcleAfterTimeout();
-
-
+    if ((event.pageX > this.mouseCyrclePosX + 10 || event.pageX < this.mouseCyrclePosX - 10) || (event.pageY > this.mouseCyrclePosY + 10 || event.pageY < this.mouseCyrclePosY - 10)) {
+      this.mouseMove = 1;
+      clearTimeout(this.mouseCyrcleTimeout);
+      this.setMousePosition(event);
+      this.mouseCyrcleDeg = event.pageX / 360;
+      this.hideMouseCyrcleAfterTimeout();
+    }
   }
 
 
@@ -72,8 +71,6 @@ export class AppComponent {
     if (event.pageY > this.mouseCyrclePosY + 10 || event.pageY < this.mouseCyrclePosY - 10) {
       this.mouseCyrclePosY = event.pageY;
     }
-
-
   }
 
 

@@ -3,7 +3,7 @@
     <div [class.social-btns-mobile]="!headerMenuActive" class="social-btns">
         <a href="https://github.com/PierreRudolph" target="_blank" rel="noopener noreferrer">
             <img src="assets/layout/git-btn.svg"></a>
-        <a href="mailto:PLettner@hotmail.de"><img src="assets/layout/email-btn.svg"></a>
+        <a href="mailto:mail@pierre-lettner.de"><img src="assets/layout/email-btn.svg"></a>
         <a href="https://linkedin.com/in/pierre-rudolph-lettner" target="_blank" rel="noopener noreferrer"><img
                 src="assets/layout/linkedin-btn.svg"></a>
     </div>
@@ -11,7 +11,7 @@
 
 <div [class.name-legal-notice-mobile]="!headerMenuActive" class="name-legal-notice">
     <span *ngIf="!mobileStyle && !headerMenuActive">© Pierre Lettner 2023</span>
-    <span *ngIf="mobileStyle || headerMenuActive">PLettner@Hotmail.de</span>
+    <span *ngIf="mobileStyle || headerMenuActive">mail@pierre-lettner.de</span>
     <div *ngIf="!headerMenuActive" class="legal-notice">
         <a routerLink="/legal-notice">Legal Notice</a>
         <div></div>

@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-above-fold',
@@ -7,6 +7,9 @@ import { Component, HostListener } from '@angular/core';
 })
 export class AboveFoldComponent {
   mobileStyle = false;
+  letters = 'ABCDEFGHIKLMNOPQRSTUVWXYZ';
+  @ViewChild('headlineOne') headlineOne: any;
+  @ViewChild('headlineTwo') headlineTwo: any;
 
   constructor() {
     this.checkScreenSize();
